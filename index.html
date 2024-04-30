@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sparky's Speak & Read Fun!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Sparky's Speak & Read Fun!</h1>
+    <img src="assets/sparky.png" alt="Sparky the Raccoon mascot">
+  </header>
+  <main>
+    <div class="text-and-button">
+      <p id="text">This is some text that Sparky can read aloud!</p>
+      <button onclick="speak()">Hear Sparky Speak!</button>
+    </div>
+    <div class="activity-section">
+      <h2>Choose an Activity:</h2>
+      <button onclick="changeTextToStory()">Story Time with Sparky!</button>
+      <button onclick="changeTextToPoem()">Sing a Poem with Sparky!</button>
+      <br>
+      <textarea type="text" id="userText" rows="8" placeholder="Type your own text here!"></textarea>
+      <br>
+      <button onclick="speakUserText()">Speak My Text!</button>
+      <button id="micButton" onclick="startSpeechRecognition()">Speak Instead!</button>
+      <p id="unsupportedMessage"></p>
+      <div class="translation-section" style="display: none;">
+        <select id="sourceLang">
+          <option value="en">English</option>
+          <option value="es">Spanish</option>
+          </select>
+        <select id="targetLang">
+          <option value="es">Spanish</option>
+          <option value="en">English</option>
+          </select>
+        <button onclick="translateText()">Translate Text</button>
+        <p id="translatedText"></p>
+      </div>
+      <button onclick="generateAudio()">Download Spoken Text</button>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2024 N.E.S</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

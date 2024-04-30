@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f8ff;  /* Light blue background */
+}
+
+header {
+  background-color: #ffd700;  /* Light yellow header */
+  padding: 20px;
+  text-align: center;
+  display: flex; /* Center elements horizontally */
+  justify-content: space-between; /* Add space between elements */
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+img {
+  width: 120px;
+  height: auto;
+}
+
+/* Main styles */
+main {
+  padding: 20px;
+}
+
+/* Text and button section styles */
+.text-and-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+button {
+  background-color: #ff9933; /* Orange button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px; /* Add spacing between buttons */
+}
+
+/* Activity section styles */
+.activity-section {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 85%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f0f8ff; /* Light blue footer */
+}
