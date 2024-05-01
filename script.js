@@ -43,20 +43,79 @@ function speak() {
     let utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'en-US';
     window.speechSynthesis.speak(utterance);
+    document.getElementById("downloadButton").style.display = "block";
   } else {
     alert("Text-to-Speech not supported by your browser.");
   }
 }
 
-function changeTextToStory() {
-  // Replace with actual story content or fetch from a database
-  document.getElementById("text").innerText = "Once upon a time, there was a brave little fox...";
+const example = document.getElementById("exampleSection");
+
+function showExample() {
+  if (example.style.display === "none") {
+    example.style.display = "block";
+  } else {
+    example.style.display = "none";
+  }
 }
 
-function changeTextToPoem() {
-  // Replace with actual poem content or fetch from a database
-  document.getElementById("text").innerText = "Twinkle, twinkle, little star...";
+const storyBeginnings = [
+  "Once upon a time, in a faraway land...",
+  "In a bustling metropolis, a young inventor named...",
+  "On a distant planet, a spaceship carrying..."
+];
+
+const storyMiddles = [
+  "encountered a strange creature with...",
+  "discovered a hidden portal leading to...",
+  "faced a challenge that required..."
+];
+
+const storyEnds = [
+  "and lived happily ever after.",
+  "ultimately triumphed, saving the day.",
+  "learned a valuable lesson about..."
+];
+
+function changeTextToStory() {
+  const beginning = storyBeginnings[Math.floor(Math.random() * storyBeginnings.length)];
+  const middle = storyMiddles[Math.floor(Math.random() * storyMiddles.length)];
+  const end = storyEnds[Math.floor(Math.random() * storyEnds.length)];
+
+  const story = `${beginning} ${middle} ${end}`;
+  document.getElementById("text").innerText = story;
+  example.style.display = "block";
 }
+
+const firstLines = [
+  "The sun dips low, casting shadows long...",
+  "A gentle breeze whispers through rustling leaves...",
+  "Beneath the starry sky, a lone wolf cries..."
+];
+
+const rhymingLines = [
+  "Birds sing their sweet songs, a joyful sound.",
+  "Memories dance in the mind, a carousel unbound.",
+  "Dreams take flight on wings of hope, soaring high."
+];
+
+const concludingLines = [
+  "A moment of peace before the coming night.",
+  "A symphony of nature, a beautiful sight.",
+  "A reminder of the beauty that surrounds us all."
+];
+
+function changeTextToPoem() {
+  const firstLine = firstLines[Math.floor(Math.random() * firstLines.length)];
+  const rhymingLine1 = rhymingLines[Math.floor(Math.random() * rhymingLines.length)];
+  const rhymingLine2 = rhymingLines[Math.floor(Math.random() * rhymingLines.length)]; // Ensure different rhyming lines (optional)
+  const concludingLine = concludingLines[Math.floor(Math.random() * concludingLines.length)];
+
+  const poem = `${firstLine}\n${rhymingLine1}\n${rhymingLine2}\n${concludingLine}`;
+  document.getElementById("text").innerText = poem;
+  example.style.display = "block";
+}
+
 
 function speakUserText() {
   let userText = document.getElementById("userText").value;
@@ -64,6 +123,7 @@ function speakUserText() {
     let utterance = new SpeechSynthesisUtterance(userText);
     utterance.lang = 'en-US';
     window.speechSynthesis.speak(utterance);
+    document.getElementById("downloadButton").style.display = "block";
   } else {
     alert("Text-to-Speech not supported by your browser.");
   }

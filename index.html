@@ -12,14 +12,15 @@
     <img src="assets/sparky.png" alt="Sparky the Raccoon mascot">
   </header>
   <main>
-    <div class="text-and-button">
+    <div id="exampleSection" class="text-and-button"  style="display: none;">
       <p id="text">This is some text that Sparky can read aloud!</p>
-      <button onclick="speak()">Hear Sparky Speak!</button>
+      <button onclick="speak()" style="margin-left: 37%; width: 25%;">Hear Sparky Speak!</button>
     </div>
     <div class="activity-section">
       <h2>Choose an Activity:</h2>
       <button onclick="changeTextToStory()">Story Time with Sparky!</button>
       <button onclick="changeTextToPoem()">Sing a Poem with Sparky!</button>
+      <button onclick="showExample()">Show Me An Example!</button>
       <br>
       <textarea type="text" id="userText" rows="8" placeholder="Type your own text here!"></textarea>
       <br>
@@ -38,7 +39,7 @@
         <button onclick="translateText()">Translate Text</button>
         <p id="translatedText"></p>
       </div>
-      <button onclick="generateAudio()">Download Spoken Text</button>
+      <button id="downloadButton" onclick="generateAudio()" style="display: none;">Download Spoken Text</button>
     </div>
   </main>
   <footer>
