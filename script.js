@@ -61,20 +61,20 @@ function showExample() {
 
 const storyBeginnings = [
   "Once upon a time, in a faraway land...",
-  "In a bustling metropolis, a young inventor named...",
-  "On a distant planet, a spaceship carrying..."
+  "In a bustling metropolis, a young inventor...",
+  "On a distant planet, a spaceship carrying very important food..."
 ];
 
 const storyMiddles = [
   "encountered a strange creature with...",
-  "discovered a hidden portal leading to...",
-  "faced a challenge that required..."
+  "discovered a hidden portal leading to another Dimension...",
+  "faced a challenge that required lots of knowledge and skill..."
 ];
 
 const storyEnds = [
   "and lived happily ever after.",
   "ultimately triumphed, saving the day.",
-  "learned a valuable lesson about..."
+  "learned a valuable lesson about friendship and loyalty..."
 ];
 
 function changeTextToStory() {
