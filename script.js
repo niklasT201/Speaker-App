@@ -50,12 +50,21 @@ function speak() {
 }
 
 const example = document.getElementById("exampleSection");
+const info = document.getElementById("info");
 
 function showExample() {
   if (example.style.display === "none") {
     example.style.display = "block";
   } else {
     example.style.display = "none";
+  }
+}
+
+function showInfo() {
+  if (info.style.display === "none") {
+    info.style.display = "block";
+  } else {
+    info.style.display = "none";
   }
 }
 
