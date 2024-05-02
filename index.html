@@ -9,10 +9,9 @@
 <body>
   <header>
     <h1>Sparky's Speak & Read Fun!</h1>
-    <label for="darkModeToggle">Dark Mode</label>
-    <input type="checkbox" id="darkModeToggle">
     <img src="assets/sparky.png" alt="Sparky the Raccoon mascot">
   </header>
+  
   
   <main>
     <div id="exampleSection" class="text-and-button"  style="display: none;">
@@ -20,11 +19,13 @@
       <button onclick="speak()" style="margin-left: 37%; width: 25%;">Hear Sparky Speak!</button>
     </div>
     <div class="activity-section">
+      <input type="checkbox" id="darkModeToggle">
       <h2>Choose an Activity:</h2>
+      <br>
       <button onclick="changeTextToStory()">Story Time with Sparky!</button>
       <button onclick="changeTextToPoem()">Sing a Poem with Sparky!</button>
       <button onclick="showExample()">Show/Hide Me The Text!</button>
-      <button onclick="showInfo()">Help!</button>
+      <button onclick="showInfo()">Info!</button>
       <p id="info" style="display: none; text-align: left; margin-top: 50px;">It's recommended to use Google Chrome or Edge</p>
       <br>
       <textarea type="text" id="userText" rows="8" placeholder="Type your own text here!"></textarea>

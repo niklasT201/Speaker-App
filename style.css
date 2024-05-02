@@ -12,6 +12,38 @@ body {
   color: #ddd; /* Light text color for dark mode */
 }
 
+/* Dark mode checkbox styles */
+#darkModeToggle {
+  display: inline-block; 
+  appearance: none; /* Remove default checkbox appearance */
+  width: 20px;
+  height: 20px;
+  background-color: #ddd; /* Light background for checkbox */
+  border: 1px solid #ddd; /* Light border for checkbox */
+  border-radius: 50%; /* Round checkbox shape */
+  cursor: pointer; /* Indicate clickable element */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+#darkModeToggle:checked {
+  background-color: #222; /* Dark background for checked checkbox */
+}
+
+#darkModeToggle::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 50%;
+  margin: 3px;
+  border-radius: 50%;
+  background-color: white; /* White checkmark for checked checkbox */
+  transition: transform 0.3s ease; /* Smooth checkmark animation */
+}
+
+#darkModeToggle:checked::after {
+  transform: rotate(65deg); /* Rotate checkmark on checkbox check */
+}
+
 header {
   background-color: #ffd700;  /* Light yellow header */
   padding: 20px;
@@ -66,6 +98,16 @@ button {
   border-radius: 5px;
 }
 
+.activity-section h2, input {
+  /* Inline-block display for button and checkbox */
+  display: inline-block; /* Make button behave like inline element */
+}
+
+.activity-section input {
+  margin-right: 10px; /* Add spacing between button and checkbox */
+  float: right;
+}
+
 h2 {
   margin-bottom: 10px;
 }
@@ -90,6 +132,10 @@ footer {
   /* Styles for screens less than or equal to 768px wide */
   button {
     width: 100%; /* Make buttons full width on smaller screens */
+  }
+
+  h2 {
+    font-size: 24px;
   }
 
   textarea {
