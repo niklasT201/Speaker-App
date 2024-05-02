@@ -212,6 +212,56 @@ function translate(text, sourceLang, targetLang) {
   return "This text is translated from " + sourceLang + " to " + targetLang;
 }
 
+const bodyElement = document.body;
+const darkModeToggle = document.getElementById('darkModeToggle');
+const orangeElements = document.querySelectorAll('button'); // Select buttons
+const footerElement = document.querySelector('footer'); // Select the footer element
+const headerElement = document.querySelector('header'); // Select the footer element
+const textareaElement = document.querySelector('textarea'); // Select the footer element
+
+// Check for stored dark mode preference on page load
+const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+// Set initial styles based on stored preference
+if (isDarkMode) {
+  bodyElement.classList.add('dark-mode');
+  orangeElements.forEach(element => element.style.backgroundColor = '#6F309F');
+  footerElement.style.backgroundColor = '#222';
+  headerElement.style.backgroundColor = '#6F309F';
+  darkModeToggle.checked = true; // Set toggle to reflect preference
+  textareaElement.style.backgroundColor = '#333'; // Set dark gray background color for footer in dark mode
+  textareaElement.style.color = '#ddd';
+} else {
+  bodyElement.classList.remove('dark-mode');
+  orangeElements.forEach(element => element.style.backgroundColor = '');
+  footerElement.style.backgroundColor = '#f0f8ff';
+  headerElement.style.backgroundColor = '#ffd700';
+  textareaElement.style.backgroundColor = ''; // Reset footer background color to light blue
+  textareaElement.style.color = '';
+}
+
+darkModeToggle.addEventListener('change', function() {
+  if (darkModeToggle.checked) {
+    bodyElement.classList.add('dark-mode');
+   orangeElements.forEach(element => element.style.backgroundColor = '#6F309F'); // Set dark purple background color for buttons
+    footerElement.style.backgroundColor = '#222'; // Set dark gray background color for footer in dark mode
+    headerElement.style.backgroundColor = '#6F309F'; // Set dark gray background color for footer in dark mode
+    textareaElement.style.backgroundColor = '#333'; // Set dark gray background color for footer in dark mode
+    textareaElement.style.color = '#ddd';
+    localStorage.setItem('darkMode', 'true'); // Store preference in local storage
+  } else {
+    bodyElement.classList.remove('dark-mode');
+    orangeElements.forEach(element => element.style.backgroundColor = ''); // Reset button background color
+    footerElement.style.backgroundColor = '#f0f8ff'; // Reset footer background color to light blue
+    headerElement.style.backgroundColor = '#ffd700'; // Reset footer background color to light blue
+    textareaElement.style.backgroundColor = ''; // Reset footer background color to light blue
+    textareaElement.style.color = '';
+    localStorage.setItem('darkMode', 'false'); // Store preference in local storage
+  }
+});
+
+
+
 
 /* 
 // Speech Recognition Functionality
