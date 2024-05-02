@@ -260,6 +260,20 @@ darkModeToggle.addEventListener('change', function() {
   }
 });
 
+const button = document.getElementById('hearButton');
+const image = document.getElementById('hearImage');
+
+window.addEventListener('resize', function() {
+  if (window.innerWidth <= 650) {
+    button.textContent = ""; // Set button content to empty string
+    image.style.display="block"; // Set button content to empty string
+  } else {
+    button.textContent = "Hear Sparky Speak!"; // Restore button text
+    image.style.display="none"; // Set button content to empty string
+  }
+});
+
+
 
 
 

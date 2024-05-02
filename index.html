@@ -16,7 +16,9 @@
   <main>
     <div id="exampleSection" class="text-and-button"  style="display: none;">
       <p id="text">This is some text that Sparky can read aloud!</p>
-      <button onclick="speak()" style="margin-left: 37%; width: 25%;">Hear Sparky Speak!</button>
+      <button onclick="speak()" id="hearButton" style="margin-left: 37%; width: 25%;">
+        <img src="assets/speaker.svg" alt="Sparky the Raccoon icon" style="width: 25px; height: 25px;" id="hearImage">
+      </button>
     </div>
     <div class="activity-section">
       <input type="checkbox" id="darkModeToggle">
@@ -26,7 +28,7 @@
       <button onclick="changeTextToPoem()">Sing a Poem with Sparky!</button>
       <button onclick="showExample()">Show/Hide Me The Text!</button>
       <button onclick="showInfo()">Info!</button>
-      <p id="info" style="display: none; text-align: left; margin-top: 50px;">It's recommended to use Google Chrome or Edge</p>
+      <p id="info" style="display: none; text-align: left; margin-top: 50px;">1. It's recommended to use Google Chrome or Edge <br> 2. Download Button isnt working right yet</p>
       <br>
       <textarea type="text" id="userText" rows="8" placeholder="Type your own text here!"></textarea>
       <br>

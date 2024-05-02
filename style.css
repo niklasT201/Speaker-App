@@ -22,7 +22,7 @@ body {
   border: 1px solid #ddd; /* Light border for checkbox */
   border-radius: 50%; /* Round checkbox shape */
   cursor: pointer; /* Indicate clickable element */
-  transition: background-color 0.3s ease; /* Smooth transition */
+  transition: background-color 0.7s ease;
 }
 
 #darkModeToggle:checked {
@@ -37,7 +37,7 @@ body {
   margin: 3px;
   border-radius: 50%;
   background-color: white; /* White checkmark for checked checkbox */
-  transition: transform 0.3s ease; /* Smooth checkmark animation */
+  transition: background-color 0.7s ease;
 }
 
 #darkModeToggle:checked::after {
@@ -50,6 +50,7 @@ header {
   text-align: center;
   display: flex; /* Center elements horizontally */
   justify-content: space-between; /* Add space between elements */
+  transition: background-color 0.7s ease;
 }
 
 h1 {
