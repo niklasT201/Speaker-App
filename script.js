@@ -92,8 +92,13 @@ function changeTextToStory() {
   const end = storyEnds[Math.floor(Math.random() * storyEnds.length)];
 
   const story = `${beginning} ${middle} ${end}`;
-  document.getElementById("text").innerText = story;
-  example.style.display = "block";
+  const textElement = document.getElementById("text");
+
+  textElement.classList.add('text-transition');
+  setTimeout(() => {
+    textElement.innerText = story;
+    example.style.display = "block";
+  }, 100); // Adjust the delay (in milliseconds) if needed
 }
 
 const firstLines = [
@@ -121,10 +126,14 @@ function changeTextToPoem() {
   const concludingLine = concludingLines[Math.floor(Math.random() * concludingLines.length)];
 
   const poem = `${firstLine}\n${rhymingLine1}\n${rhymingLine2}\n${concludingLine}`;
-  document.getElementById("text").innerText = poem;
-  example.style.display = "block";
-}
+  const textElement = document.getElementById("text");
 
+  textElement.classList.add('text-transition');
+  setTimeout(() => {
+    textElement.innerText = poem;
+    example.style.display = "block";
+  }, 100); // Adjust the delay (in milliseconds) if needed
+}
 
 function speakUserText() {
   let userText = document.getElementById("userText").value;

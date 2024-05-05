@@ -143,3 +143,16 @@ footer {
     width: 95%;
   }
 }
+
+@keyframes showText {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.text-and-button {
+  animation: showText 3s ease-in-out; /* Animation name, duration, timing function */
+}
+
+.animation {
+  animation: showText 2.5s ease-in-out; /* Animation name, duration, timing function */
+}
