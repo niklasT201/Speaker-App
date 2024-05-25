@@ -37,7 +37,7 @@
      let utterance = new SpeechSynthesisUtterance(text);
      utterance.lang = 'en-US';
      window.speechSynthesis.speak(utterance);
-     document.getElementById("downloadButton").style.display = "block";
+/*      document.getElementById("downloadButton").style.display = "block"; */
    } else {
      alert("Text-to-Speech not supported by your browser.");
    }
@@ -137,7 +137,7 @@
      let utterance = new SpeechSynthesisUtterance(userText);
      utterance.lang = 'en-US';
      window.speechSynthesis.speak(utterance);
-     document.getElementById("downloadButton").style.display = "block";
+   /*   document.getElementById("downloadButton").style.display = "block"; */
    } else {
      alert("Text-to-Speech not supported by your browser.");
    }
